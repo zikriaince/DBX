@@ -1,26 +1,28 @@
 #!/bin/bash
 # TODO: Convert to Python.
-#20250319-zai: Enhanced message logging.
-#20241115-zai: Print "Skipping" if file already exists. Removed space from FCHN log file name.
-#20241021-zai: Changed rh-python36 references with /usr/bin/python3.8 (returned by which python3.8) for the new SAS environment. 
-#20241016-zai: Changed FORMA_TOP and replaced paths for the new SAS environment. 
-#20240411-zai: Replaced rh-python38 with rh-python36 as only 1065 server has rh-python38. 
-#20240404-zai: Replaced cms_taxonomy with nucc_taxonomy to pull Taxonomy data from National Uniform Claims Committee (NUCC), 
-#20240311-zai: Added cms_taxonomy to pull Taxonomy data from CMS. 
-#20231227-zai: Corrected flag file name and modified download_files to create flag if new files were pulled. 
-#20231206-zai: Added code to create "<entity>_new_file.flg". 
-#20230713-zai: Corrected date comparison in download_files function. 
-#20230713-zai: Commented out pull for int_pharmacy, we are assuming it is the same as medimpact.
+#20250319-z: Enhanced message logging.
+#20241115-z: Print "Skipping" if file already exists. Removed space from FCHN log file name.
+#20241021-z: Changed rh-python36 references with /usr/bin/python3.8 (returned by which python3.8) for the new SAS environment. 
+#20241016-z: Changed FORMA_TOP and replaced paths for the new SAS environment. 
+#20240411-z: Replaced rh-python38 with rh-python36 as only 1065 server has rh-python38. 
+#20240404-z: Replaced cms_taxonomy with nucc_taxonomy to pull Taxonomy data from National Uniform Claims Committee (NUCC), 
+#20240311-z: Added cms_taxonomy to pull Taxonomy data from CMS. 
+#20231227-z: Corrected flag file name and modified download_files to create flag if new files were pulled. 
+#20231206-z: Added code to create "<entity>_new_file.flg". 
+#20230713-z: Corrected date comparison in download_files function. 
+#20230713-z: Commented out pull for int_pharmacy, we are assuming it is the same as medimpact.
 filename=$(realpath "$0")
 #filename=`basename $0`
 #filename=`echo $filename | cut -d\. -f1`
+
+scion_data = "/scion/data"
 
 echo
 echo "====================================================================."
 echo "`date '+%Y%m%d %T'`> ${filename}.sh starting" 
 echo ""
 
-export FORMA_TOP=/gpfs/FS2/sasdata/adhoc/kpit/cdts/nwdis/NWKPIT/FORMA/form_a
+export FORMA_TOP=/form_a
 export FORMA_BIN=${FORMA_TOP}/bin
 export ENTITIES_TOP=${FORMA_TOP}/entities
 export UPWD=`cat $FORMA_TOP/.dwssap/.nwdw/.forma | gunzip`
