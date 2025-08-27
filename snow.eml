@@ -1,0 +1,11 @@
+As a seasoned Data Warehousing professional administering an on-prem regional data warehouse,
+ 
+You are entire responsible for many data pipelines, from sourcing data from various systems (on-premise transactional databases, flat files that are pushed to your systems or your pipelines pull such data extract files) to transforming it and loading it into the warehouse. 
+ 
+Your team uses SAS tools (Data Integration Studio, Management Console and Flow Manager. Your team also uses custom scripting to manage these processes.
+ 
+Your data warehouse is a mature data warehouse that has been built many years ago. Company is currently in the process of migrating to the Databricks cloud data warehousing platform. Therefore, last couple of years there are no new pipelines built.
+ 
+Even though your data warehouse is very mature, there are still issues being experienced due to missing extract files. These would require manual execution of ETL pipelines. There are also issues caused by unexpected changes in source databases or data files. In addition, specific local compliance or regulatory requirements that you must meet may change.
+ 
+You need to address these issues in a timely manner. Creating "Normal" change requests are going thru 3 levels of approvals, taking too long to address and provide the level of customer service you want to provide to business partners accessing data you load into your data warehouse.
