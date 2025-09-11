@@ -1,7 +1,7 @@
 https://customerconnect.vmware.com/en/downloads/details?downloadGroup=CART23FQ4_MAC_2212.1&productId=1027&rPId=107193
 https://customerconnect.omnissa.com/downloads/details?downloadGroup=CART26FQ2_MAC_2506&productId=1616&rPId=119131
 https://customerconnect.omnissa.com/en/downloads/details?downloadGroup=CART23FQ4_MAC_2212.1&productId=1027&rPId=107193
-
+https://filehippo.com/mac/download_vmware-horizon-client/
 
 #!/bin/bash
 # TODO: Convert to Python.
