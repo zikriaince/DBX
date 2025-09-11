@@ -1,3 +1,6 @@
+https://customerconnect.vmware.com/en/downloads/details?downloadGroup=CART23FQ4_MAC_2212.1&productId=1027&rPId=107193
+
+
 #!/bin/bash
 # TODO: Convert to Python.
 #20250319-z: Enhanced message logging.
